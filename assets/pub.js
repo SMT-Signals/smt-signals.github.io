@@ -78,3 +78,18 @@ document.addEventListener("submit", function (ev) {
   location.href = "mailto:" + form.getAttribute("data-email") + "?subject=" + encodeURIComponent(subject)
     + "&body=" + encodeURIComponent(lines.join("\n"));
 });
+
+// Nút sao chép chữ chia sẻ (báo cáo tháng): data-copy-from = id phần tử chứa chữ, data-done = chữ hiện tạm sau khi chép.
+document.addEventListener("click", function (ev) {
+  var b = ev.target.closest("[data-copy-from]");
+  if (!b || !navigator.clipboard) return;
+  var el = document.getElementById(b.getAttribute("data-copy-from"));
+  if (!el) return;
+  navigator.clipboard.writeText(el.textContent).then(function () {
+    b.classList.add("done");
+    var mark = document.createElement("span");
+    mark.textContent = " " + (b.getAttribute("data-done") || "✓");
+    b.appendChild(mark);
+    setTimeout(function () { mark.remove(); b.classList.remove("done"); }, 1500);
+  }, function () {});
+});

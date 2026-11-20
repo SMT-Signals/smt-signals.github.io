@@ -28,6 +28,7 @@ Crypto futures signals on the 4-hour chart, traded automatically with real money
 | Overview | [/en/](https://smt-signals.github.io/en/) | [/](https://smt-signals.github.io/) | Live R since launch, win rate, drawdown, R by month, latest closed signals |
 | Signal log | [/en/log/](https://smt-signals.github.io/en/log/) | [/log/](https://smt-signals.github.io/log/) | Every signal with candle time, entry time and delay, entry, SL, TP3, result; filters and CSV |
 | Open trades | [/en/open/](https://smt-signals.github.io/en/open/) | [/open/](https://smt-signals.github.io/open/) | Trades open for 24 hours or more, distance to TP3, floating R |
+| Monthly reports | [/en/report/](https://smt-signals.github.io/en/report/) | [/report/](https://smt-signals.github.io/report/) | Each calendar month: R, trades, win rate, drawdown vs backtest expectation, with an image and text to share |
 | Backtest | [/en/backtest/](https://smt-signals.github.io/en/backtest/) | [/backtest/](https://smt-signals.github.io/backtest/) | Cumulative R by month since 2019, drawdowns, every month and year, LONG vs SHORT |
 | Method & risk | [/en/method/](https://smt-signals.github.io/en/method/) | [/method/](https://smt-signals.github.io/method/) | How the bot trades, what an R is, risks to know, FAQ |
 | Contact | [/en/contact/](https://smt-signals.github.io/en/contact/) | [/contact/](https://smt-signals.github.io/contact/) | Email, Telegram, how to spot impersonators |
@@ -97,6 +98,10 @@ One row per signal, oldest first. Times are UTC, ISO 8601.
 | `entry`, `sl`, `tp3` | Entry price (signal close price for `rule`), stop loss, take profit 3 |
 | `r` | Result of the whole trade in R, after fees and funding (empty while open) |
 | `closed_at_utc` | When the trade fully closed |
+
+### `data/monthly/YYYY-MM.txt`
+
+The share text of each finished month (English, then Vietnamese), as posted on the Telegram channel. The month's image is in `assets/monthly/YYYY-MM.png`.
 
 ### `data/summary.json`
 
