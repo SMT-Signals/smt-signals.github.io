@@ -1,0 +1,84 @@
+/* Token giao diện: màu, chữ, khoảng cách. Component chỉ dùng var(--...), đổi giao diện chỉ sửa file này.
+   Tối là mặc định; sáng khi máy đặt chế độ sáng (prefers-color-scheme) hoặc người dùng chọn (data-theme trên <html>,
+   static/theme.js nhớ lựa chọn). */
+:root {
+  color-scheme: dark;
+  --bg: #0B0F15;
+  --bg-glow: #13213A;                 /* quầng sáng góc trên trang */
+  --sidebar: #0B0F15;
+  --surface: rgba(19, 25, 34, 0.72);  /* thẻ */
+  --surface-solid: #131922;
+  --tile: #0F141C;                    /* ô nhỏ trong thẻ */
+  --surface-2: #1E2530;
+  --hover: #263040;
+  --line: #1F2733;
+  --line-2: #263040;
+  --line-soft: #1A2029;
+  --field: #11161E;
+  --field-line: #2C3440;
+  --text: #E6EAF0;
+  --strong: #FFFFFF;
+  --text-2: #B8C1CC;
+  --muted: #9AA4B2;
+  --faint: #8B95A3;
+  --accent: #4C9AFF;
+  --accent-ink: #0B0F15;
+  --accent-line: #2F5FA8;
+  --accent-soft: rgba(76, 154, 255, 0.10);
+  --glow: 0 0 0 1px rgba(76, 154, 255, 0.15), 0 0 40px rgba(76, 154, 255, 0.18);
+  --hero-bg: linear-gradient(180deg, #111B2C, #0D131C);
+  --seg-on: #E6EAF0;
+  --seg-on-ink: #0B0F15;
+  --link: #7DB4FF;
+  --link-hover: #A9CCFF;
+  --pos: #6EE7A8;
+  --pos-bg: #12301F;
+  --pos-line: #4CC38A;
+  --pos-dim: #2F6B4F;
+  --neg: #F7A25C;
+  --neg-bg: #3A2512;
+  --neg-dim: #7A4A20;
+  --info: #9CC3FF;
+  --info-bg: #1B2A44;
+  --band: #233041;
+  --heat-p: 76, 195, 138;             /* RGB ô lưới lãi */
+  --heat-n: 247, 162, 92;             /* RGB ô lưới lỗ */
+  --heat-ink: #0B0F15;                /* chữ trên ô đậm */
+  --radius: 16px;
+  --radius-sm: 12px;
+  --gap: 20px;
+  --font: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Bảng màu sáng, dùng ở hai chỗ dưới (máy đặt sáng mà người dùng chưa chọn tối; hoặc người dùng chọn sáng). */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg: #F6F7F9; --bg-glow: #E4EEFC; --sidebar: #FFFFFF; --surface: #FFFFFF; --surface-solid: #FFFFFF; --tile: #F9FAFB;
+    --surface-2: #EEF1F5; --hover: #E2E7EE; --line: #DDE2E8; --line-2: #DDE2E8; --line-soft: #E9EDF2;
+    --field: #FFFFFF; --field-line: #C9D1DB;
+    --text: #141A22; --strong: #0B0E13; --text-2: #3A4553; --muted: #5B6675; --faint: #6B7684;
+    --accent: #1F6FEB; --accent-ink: #FFFFFF; --accent-line: #8DB4F5; --accent-soft: rgba(31, 111, 235, 0.08);
+    --glow: 0 0 0 1px rgba(31, 111, 235, 0.10), 0 8px 30px rgba(31, 111, 235, 0.10);
+    --hero-bg: linear-gradient(180deg, #FFFFFF, #F5F8FD); --seg-on: #141A22; --seg-on-ink: #FFFFFF;
+    --link: #1B5FCC; --link-hover: #0F4AA8;
+    --pos: #11743F; --pos-bg: #E3F5EA; --pos-line: #1F9D5A; --pos-dim: #8CCBA6;
+    --neg: #B4520F; --neg-bg: #FCEBDD; --neg-dim: #F2C9A8; --info: #1D4F9E; --info-bg: #E4EEFC;
+    --band: #DCE6F3; --heat-p: 31, 157, 90; --heat-n: 214, 110, 30; --heat-ink: #0B0E13;
+  }
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #F6F7F9; --bg-glow: #E4EEFC; --sidebar: #FFFFFF; --surface: #FFFFFF; --surface-solid: #FFFFFF; --tile: #F9FAFB;
+  --surface-2: #EEF1F5; --hover: #E2E7EE; --line: #DDE2E8; --line-2: #DDE2E8; --line-soft: #E9EDF2;
+  --field: #FFFFFF; --field-line: #C9D1DB;
+  --text: #141A22; --strong: #0B0E13; --text-2: #3A4553; --muted: #5B6675; --faint: #6B7684;
+  --accent: #1F6FEB; --accent-ink: #FFFFFF; --accent-line: #8DB4F5; --accent-soft: rgba(31, 111, 235, 0.08);
+  --glow: 0 0 0 1px rgba(31, 111, 235, 0.10), 0 8px 30px rgba(31, 111, 235, 0.10);
+  --hero-bg: linear-gradient(180deg, #FFFFFF, #F5F8FD); --seg-on: #141A22; --seg-on-ink: #FFFFFF;
+  --link: #1B5FCC; --link-hover: #0F4AA8;
+  --pos: #11743F; --pos-bg: #E3F5EA; --pos-line: #1F9D5A; --pos-dim: #8CCBA6;
+  --neg: #B4520F; --neg-bg: #FCEBDD; --neg-dim: #F2C9A8; --info: #1D4F9E; --info-bg: #E4EEFC;
+  --band: #DCE6F3; --heat-p: 31, 157, 90; --heat-n: 214, 110, 30; --heat-ink: #0B0E13;
+}

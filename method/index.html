@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phương pháp và rủi ro · SMT Signals</title>
+<meta name="description" content="Tín hiệu crypto khung 4h, kết quả thật công khai từng lệnh">
+<meta property="og:title" content="SMT Signals · Phương pháp và rủi ro">
+<meta property="og:description" content="Tín hiệu crypto khung 4h, kết quả thật công khai từng lệnh">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="vi" href="https://smt-signals.github.io/method/">
+<link rel="alternate" hreflang="en" href="https://smt-signals.github.io/en/method/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/tokens.css?v=03bb058bca">
+<link rel="stylesheet" href="/assets/components.css?v=03bb058bca">
+<link rel="stylesheet" href="/assets/pub.css?v=03bb058bca">
+<script src="/assets/theme.js?v=03bb058bca"></script>
+<script src="/assets/app.js?v=03bb058bca" defer></script>
+<script src="/assets/pub.js?v=03bb058bca" defer></script>
+</head>
+<body>
+
+<div id="loadbar" aria-hidden="true"></div>
+<div class="shell">
+  <aside class="sidebar" id="sidebar" aria-label="Menu">
+    <a class="brand" href="/">
+      <span class="logo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 17 9 11 13 15 21 7"></polyline><polyline points="15 7 21 7 21 13"></polyline></svg></span>
+      <span><b>SMT Signals</b><small>Tín hiệu crypto · 4h</small></span>
+    </a>
+    <nav class="snav" aria-label="Menu">
+      
+      <a href="/" class="" title="Tổng quan" >
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"></path></svg><span class="lbl-x">Tổng quan</span></a>
+      
+      <a href="/log/" class="" title="Nhật ký tín hiệu" >
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"></path></svg><span class="lbl-x">Nhật ký tín hiệu</span></a>
+      
+      <a href="/open/" class="" title="Lệnh đang mở" >
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"></path></svg><span class="lbl-x">Lệnh đang mở</span></a>
+      
+      <a href="/backtest/" class="" title="Backtest" >
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M6 16l4-5 3 3 5-7"></path></svg><span class="lbl-x">Backtest</span></a>
+      
+      <a href="/method/" class="on" title="Phương pháp &amp; rủi ro" aria-current="page">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"></path></svg><span class="lbl-x">Phương pháp &amp; rủi ro</span></a>
+      
+      <a href="/contact/" class="" title="Liên hệ" >
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6"></path></svg><span class="lbl-x">Liên hệ</span></a>
+      
+    </nav>
+    <div class="sidebox">
+      <a class="tgbox" href="https://t.me/smt_trading_signals" rel="noopener" target="_blank">
+        <span class="tgic">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3L2 11l7 2 2 7 4-5 5 4z"></path></svg></span>
+        <span><b>Kênh Telegram miễn phí</b><small>@smt_trading_signals · Thông báo tín hiệu và kết quả.</small></span>
+      </a>
+    </div>
+    <div class="me pubme">
+      <nav class="seg langseg" aria-label="Ngôn ngữ"><a href="/method/" hreflang="vi" lang="vi" class="on" aria-current="true">VI</a><a href="/en/method/" hreflang="en" lang="en" class="" >EN</a></nav>
+      <button type="button" id="theme-btn" class="btn icon sm" aria-label="Đổi giao diện sáng / tối" title="Đổi giao diện sáng / tối" data-to-light="Chuyển sang giao diện sáng" data-to-dark="Chuyển sang giao diện tối"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="pagehead">
+      <div class="hgroup">
+      <button type="button" id="nav-btn" class="btn icon" aria-label="Thu gọn / mở menu" title="Thu gọn / mở menu" aria-controls="sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="9" y1="4" x2="9" y2="20"></line></svg></button>
+      <div>
+        <h1>Phương pháp và rủi ro</h1>
+        <div class="meta">
+          <span class="live">Cập nhật 20/11 15:54</span>
+          <span class="sep"></span><span>Luật hiện tại chốt từ 19/10/2026</span>
+        </div>
+      </div>
+      </div>
+      <div class="pagehead-r"></div>
+    </header>
+    <main class="content" id="page">
+
+<p class="lead plain">Bot làm gì, kỳ vọng thật ra sao, và những điều nên biết trước khi dựa vào bất kỳ con số nào ở trang này.</p>
+<div class="rules">
+  <section class="card step"><span class="proof-ic">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M6 16l4-5 3 3 5-7"></path></svg></span><h3>Tín hiệu</h3><p class="card-sub">Bot quét 153 mã futures Binance mỗi khi nến 4h đóng. Chỉ lấy tín hiệu mạnh nhất theo cấu trúc giá và động lượng, và bỏ tín hiệu khi cả thị trường đang quá nóng theo cùng một chiều.</p></section>
+
+  <section class="card step"><span class="proof-ic">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><h3>Vào và ra lệnh</h3><p class="card-sub">Vào giá thị trường ngay sau nến đóng. SL và TP3 đặt sẵn trên sàn cùng lúc, không dời, không chốt sớm: lệnh kết thúc khi chạm một trong hai.</p></section>
+
+  <section class="card step"><span class="proof-ic">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"></path></svg></span><h3>Giới hạn rủi ro</h3><p class="card-sub">Mỗi lệnh rủi ro 1R. Có giới hạn số lệnh mở cùng lúc; cùng mã cùng chiều thì chồng lệnh, ngược chiều thì bỏ; lỗ trong ngày quá mức thì ngừng mở lệnh mới.</p></section>
+
+  <section class="card step"><span class="proof-ic">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v15H4zM4 9h16M9 3v4M15 3v4"></path></svg></span><h3>Không chỉnh theo kết quả</h3><p class="card-sub">Luật hiện tại chốt từ 19/10/2026. Đổi luật chỉ khi đã đo trên toàn bộ lịch sử, và lần đổi đó sẽ được ghi công khai.</p></section>
+</div>
+
+<div class="row">
+  <section class="card grow">
+    <h2>Một R là gì</h2>
+    <p class="card-sub">Mỗi lệnh bot chấp nhận mất đúng một khoản cố định nếu chạm SL, gọi là 1R. Kết quả ghi theo R để ai cũng quy đổi theo vốn của mình: với 1R = 10 USDT, +2.5R là +25 USDT.</p>
+    <div class="kv-grid three rkv"><div class="kv"><span class="k">Chạm SL</span><span class="v">≈ −1R</span><span class="k">đã gồm phí</span></div><div class="kv"><span class="k">Chạm TP3 (backtest)</span><span class="v">+1.19R</span><span class="k">trung bình</span></div><div class="kv"><span class="k">Hoà vốn cần thắng</span><span class="v">~46%</span><span class="k">backtest thắng 59%</span></div></div>
+  </section>
+</div>
+
+<section class="card">
+  <h2>Rủi ro nên biết trước</h2>
+  <ol class="risks"><li><span class="stepn">1</span><div><b>Sụt vốn là bình thường</b><p class="card-sub">Backtest có đợt sụt sâu −28.8R; chuỗi thua liên tiếp dài nhất 20 lệnh.</p></div></li><li><span class="stepn">2</span><div><b>Có tháng âm</b><p class="card-sub">Khoảng 24% số tháng backtest là âm; có giai đoạn vài tuần liền không có lãi.</p></div></li><li><span class="stepn">3</span><div><b>Backtest là trong mẫu</b><p class="card-sub">Luật chọn khi đã thấy dữ liệu, chưa trừ trượt giá và funding. Kỳ vọng thật thấp hơn.</p></div></li><li><span class="stepn">4</span><div><b>Vào sau bot là thiệt</b><p class="card-sub">Lợi thế nằm ở việc vào ngay sau nến đóng. Vào muộn vài phút trên coin nhỏ đã có thể mất phần lớn lợi thế.</p></div></li><li><span class="stepn">5</span><div><b>Rủi ro sàn và coin</b><p class="card-sub">Sàn lỗi, coin bị huỷ niêm yết, biến động cực mạnh làm SL khớp xa hơn giá đặt.</p></div></li><li><span class="stepn">6</span><div><b>Đòn bẩy</b><p class="card-sub">Hợp đồng tương lai có đòn bẩy: dùng sai cỡ lệnh có thể mất toàn bộ vốn dù tỉ lệ thắng cao.</p></div></li></ol>
+</section>
+
+<section class="card">
+  <h2>Câu hỏi thường gặp</h2>
+  <div class="faq"><details><summary>Vì sao lệnh đang mở trễ 24 giờ?</summary><p class="card-sub">Để trang này không thành chỗ vào lệnh theo muộn. Vào sau bot vài giờ thường được giá tệ hơn nhiều; kênh Telegram là nơi nhận tín hiệu.</p></details><details><summary>Số liệu có bị sửa không?</summary><p class="card-sub">Mỗi lần cập nhật là một commit vào repo GitHub công khai. Ai cũng xem được lịch sử thay đổi của từng file.</p></details><details><summary>Vì sao không ghi số tiền?</summary><p class="card-sub">Kết quả ghi theo R để không phụ thuộc cỡ tài khoản; bạn tự quy đổi theo mức rủi ro mỗi lệnh của mình.</p></details><details><summary>Tôi có thể dùng bot không?</summary><p class="card-sub">Hãy liên hệ qua trang Liên hệ. <a href="/contact/">Liên hệ →</a></p></details></div>
+</section>
+
+    </main>
+    <footer class="statusbar">
+      <span class="tag warn">KHÔNG PHẢI LỜI KHUYÊN ĐẦU TƯ</span><span class="vsep" aria-hidden="true"></span><span>Kết quả quá khứ và backtest không bảo đảm tương lai; futures crypto có thể mất toàn bộ vốn.</span>
+      <span class="foot-r"><a href="mailto:smtsignals.contact@gmail.com">smtsignals.contact@gmail.com</a><span class="vsep" aria-hidden="true"></span><a href="https://t.me/smt_trading_signals" rel="noopener" target="_blank">@smt_trading_signals</a></span>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

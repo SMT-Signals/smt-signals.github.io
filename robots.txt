@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://smt-signals.github.io/sitemap.xml

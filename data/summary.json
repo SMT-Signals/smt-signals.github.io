@@ -1,0 +1,26 @@
+{
+  "updated_at": "2026-11-20T08:54:35Z",
+  "delay_hours": 24.0,
+  "live_since": "2026-10-20T15:02:13Z",
+  "live": {
+    "closed_trades": 56,
+    "tp3": 41,
+    "sl": 11,
+    "other": 4,
+    "win_rate": 0.7884615384615384,
+    "total_r": 44.799,
+    "r_per_trade": 0.8,
+    "max_drawdown_r": 3.008,
+    "open_public": 2,
+    "open_not_yet_public": 0
+  },
+  "backtest": {
+    "trades": 3185,
+    "win_rate": 0.594348508634223,
+    "total_r": 969.19,
+    "r_per_trade": 0.3042992464678182,
+    "max_drawdown_r": 28.75,
+    "data_to": "2026-11-20T08:00:00Z",
+    "rules_since": "2026-10-19"
+  }
+}
