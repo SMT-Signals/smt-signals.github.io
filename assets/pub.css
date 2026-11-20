@@ -106,3 +106,4 @@
 .sharecard { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line-2); display: block; }
 .sharetext { margin: 0; padding: 12px; border-radius: 10px; background: var(--field); border: 1px solid var(--field-line);
   font: 12px/1.55 var(--mono); color: var(--text-2); white-space: pre-wrap; overflow-wrap: anywhere; }
+.pubme #theme-btn { margin-left: auto; }

@@ -4,18 +4,6 @@ Result +13.4R · win rate 71% · max drawdown −2.2R
 Backtest expectation for 21 trades: +6.4R
 Since launch (20/10/2026): +13.4R
 
-Every trade: https://smt-signals.github.io/en/report/2026-10/
+Every trade: https://smt-signals.github.io/report/2026-10/
 Verify on GitHub: https://github.com/SMT-Signals/smt-signals.github.io/commits/main
 Not investment advice.
-
----
-
-📊 SMT Signals · Tháng 10/2026
-Đóng 21 lệnh: 15 TP3 · 6 SL · 0 khác
-Kết quả +13.4R · thắng 71% · sụt lớn nhất −2.2R
-Kỳ vọng backtest cho 21 lệnh: +6.4R
-Từ khi chạy thật (20/10/2026): +13.4R
-
-Từng lệnh: https://smt-signals.github.io/report/2026-10/
-Kiểm trên GitHub: https://github.com/SMT-Signals/smt-signals.github.io/commits/main
-Không phải lời khuyên đầu tư.

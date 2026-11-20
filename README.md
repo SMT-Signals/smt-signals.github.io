@@ -2,9 +2,9 @@
 
 Crypto futures signals on the 4-hour chart, traded automatically with real money. **Every result is published, losers included.**
 
-**[🌐 Open the website](https://smt-signals.github.io/en/)** · **[📣 Free Telegram channel](https://t.me/smt_trading_signals)** · **[📄 Signal log (CSV)](data/signals.csv)** · **[🇻🇳 Tiếng Việt](https://smt-signals.github.io/)**
+**[🌐 Open the website](https://smt-signals.github.io/)** · **[📣 Free Telegram channel](https://t.me/smt_trading_signals)** · **[📄 Signal log (CSV)](data/signals.csv)**
 
-[![SMT Signals overview: live cumulative R against the backtest expectation](assets/readme/overview.png)](https://smt-signals.github.io/en/)
+[![SMT Signals overview: live cumulative R against the backtest expectation](assets/readme/overview.png)](https://smt-signals.github.io/)
 
 > **Not investment advice.** Past results and backtests do not guarantee future results. Leveraged crypto futures can lose all of your capital.
 
@@ -19,19 +19,18 @@ Crypto futures signals on the 4-hour chart, traded automatically with real money
 - [Results in R](#results-in-r)
 - [Backtest](#backtest)
 - [Beware of impersonators](#beware-of-impersonators)
-- [Tiếng Việt](#tiếng-việt)
 
 ## Pages
 
-| Page | English | Tiếng Việt | What you find there |
-|---|---|---|---|
-| Overview | [/en/](https://smt-signals.github.io/en/) | [/](https://smt-signals.github.io/) | Live R since launch, win rate, drawdown, R by month, latest closed signals |
-| Signal log | [/en/log/](https://smt-signals.github.io/en/log/) | [/log/](https://smt-signals.github.io/log/) | Every signal with candle time, entry time and delay, entry, SL, TP3, result; filters and CSV |
-| Open trades | [/en/open/](https://smt-signals.github.io/en/open/) | [/open/](https://smt-signals.github.io/open/) | Trades open for 24 hours or more, distance to TP3, floating R |
-| Monthly reports | [/en/report/](https://smt-signals.github.io/en/report/) | [/report/](https://smt-signals.github.io/report/) | Each calendar month: R, trades, win rate, drawdown vs backtest expectation, with an image and text to share |
-| Backtest | [/en/backtest/](https://smt-signals.github.io/en/backtest/) | [/backtest/](https://smt-signals.github.io/backtest/) | Cumulative R by month since 2019, drawdowns, every month and year, LONG vs SHORT |
-| Method & risk | [/en/method/](https://smt-signals.github.io/en/method/) | [/method/](https://smt-signals.github.io/method/) | How the bot trades, what an R is, risks to know, FAQ |
-| Contact | [/en/contact/](https://smt-signals.github.io/en/contact/) | [/contact/](https://smt-signals.github.io/contact/) | Email, Telegram, how to spot impersonators |
+| Page | Link | What you find there |
+|---|---|---|
+| Overview | [/](https://smt-signals.github.io/) | Live R since launch, win rate, drawdown, R by month, latest closed signals |
+| Signal log | [/log/](https://smt-signals.github.io/log/) | Every signal with candle time, entry time and delay, entry, SL, TP3, result; filters and CSV |
+| Open trades | [/open/](https://smt-signals.github.io/open/) | Trades open for 24 hours or more, distance to TP3, floating R |
+| Monthly reports | [/report/](https://smt-signals.github.io/report/) | Each calendar month: R, trades, win rate, drawdown vs backtest expectation, with an image and text to share |
+| Backtest | [/backtest/](https://smt-signals.github.io/backtest/) | Cumulative R by month since 2019, drawdowns, every month and year, LONG vs SHORT |
+| Method & risk | [/method/](https://smt-signals.github.io/method/) | How the bot trades, what an R is, risks to know, FAQ |
+| Contact | [/contact/](https://smt-signals.github.io/contact/) | Email, Telegram, how to spot impersonators |
 
 Light and dark themes, phone-friendly. Contact: smtsignals.contact@gmail.com · Telegram [@smt_bot_signals](https://t.me/smt_bot_signals).
 
@@ -41,15 +40,15 @@ Taken on 20 Nov 2026. The website always shows the latest numbers.
 
 **Signal log**: every signal, including losers and the time the bot entered.
 
-[![Signal log](assets/readme/signal-log.png)](https://smt-signals.github.io/en/log/)
+[![Signal log](assets/readme/signal-log.png)](https://smt-signals.github.io/log/)
 
 **Backtest**: the current rules replayed since 2019; the dashed line marks the date the rules were frozen.
 
-[![Backtest](assets/readme/backtest.png)](https://smt-signals.github.io/en/backtest/)
+[![Backtest](assets/readme/backtest.png)](https://smt-signals.github.io/backtest/)
 
 **On a phone** (light theme):
 
-<a href="https://smt-signals.github.io/en/"><img src="assets/readme/mobile.png" alt="SMT Signals on a phone, light theme" width="300"></a>
+<a href="https://smt-signals.github.io/"><img src="assets/readme/mobile.png" alt="SMT Signals on a phone, light theme" width="300"></a>
 
 ## What this repository is
 
@@ -101,7 +100,7 @@ One row per signal, oldest first. Times are UTC, ISO 8601.
 
 ### `data/monthly/YYYY-MM.txt`
 
-The share text of each finished month (English, then Vietnamese), as posted on the Telegram channel. The month's image is in `assets/monthly/YYYY-MM.png`.
+The share text of each finished month, as posted on the Telegram channel. The month's image is in `assets/monthly/YYYY-MM.png`.
 
 ### `data/summary.json`
 
@@ -128,15 +127,3 @@ SMT Signals will never:
 - ask for passwords, 2FA codes, or API keys with withdrawal permission.
 
 The only official channels are **smtsignals.contact@gmail.com**, **[@smt_bot_signals](https://t.me/smt_bot_signals)** and **[@smt_trading_signals](https://t.me/smt_trading_signals)**.
-
-## Tiếng Việt
-
-Repo này chỉ chứa trang web **đã dựng sẵn** và dữ liệu của SMT Signals, không có code bot. Khoảng 30 phút sau mỗi lần nến 4h đóng, máy chủ dựng lại trang và đẩy **một commit**. Lịch sử commit là bằng chứng: tín hiệu có trong commit nào thì đã tồn tại từ lúc đó.
-
-- Kết quả ghi theo **R** (1R = khoản lỗ cố định khi chạm SL), không ghi số tiền.
-- Tín hiệu và lệnh đang mở chỉ hiện trên web sau **24 giờ**; tin tức thì nằm ở kênh Telegram [@smt_trading_signals](https://t.me/smt_trading_signals).
-- Tín hiệu bị **bỏ theo luật** vẫn được công khai; tín hiệu **bị sót vì lỗi kỹ thuật** thì không.
-- Mô tả từng cột dữ liệu xem mục [Data files](#data-files).
-- **Không phải lời khuyên đầu tư.** Futures crypto có đòn bẩy, có thể mất toàn bộ vốn.
-
-Liên hệ: smtsignals.contact@gmail.com · Telegram [@smt_bot_signals](https://t.me/smt_bot_signals)
