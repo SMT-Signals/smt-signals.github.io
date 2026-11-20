@@ -95,5 +95,7 @@
 }
 
 /* backtest */
-.kpis { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+.kpis { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+.side .tbl.compact th, .side .tbl.compact td { padding-left: 8px; padding-right: 8px; }
+.side .tbl.compact th:first-child, .side .tbl.compact td:first-child { padding-left: 16px; }
 .xax + .cap { margin-top: 14px; }
