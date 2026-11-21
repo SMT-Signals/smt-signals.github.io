@@ -175,7 +175,8 @@ table.tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
 .tbl tr.sel { background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent); }
 .tbl tr.manual td { color: var(--muted); }
 .tbl .r { text-align: right; }
-.tbl td.actions { display: flex; gap: 8px; justify-content: flex-end; }
+.tbl td.actions { text-align: right; }               /* giữ table-cell: flex làm ô trống co lại, đứt đường kẻ dòng */
+.tbl td.actions > * + * { margin-left: 8px; }
 .tbl .b { font-weight: 600; color: var(--strong); }
 .symcell { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
 .symcell .s { display: flex; flex-direction: column; }
