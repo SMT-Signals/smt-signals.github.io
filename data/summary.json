@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T08:30:05Z",
+  "updated_at": "2026-11-23T12:30:03Z",
   "delay_hours": 24.0,
   "live_since": "2026-10-20T15:02:13Z",
   "live": {
@@ -15,12 +15,12 @@
     "open_not_yet_public": 1
   },
   "backtest": {
-    "trades": 3185,
-    "win_rate": 0.594348508634223,
-    "total_r": 969.19,
-    "r_per_trade": 0.3042992464678182,
+    "trades": 3208,
+    "win_rate": 0.5932044887780549,
+    "total_r": 972.85,
+    "r_per_trade": 0.30325813591022466,
     "max_drawdown_r": 28.75,
-    "data_to": "2026-11-23T08:00:00Z",
+    "data_to": "2026-11-23T12:00:00Z",
     "rules_since": "2026-10-19"
   }
 }
