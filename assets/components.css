@@ -282,14 +282,6 @@ form.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .sidetag.short { color: var(--neg); }
 
 /* ---- thước sụt vốn (SVG) ------------------------------------------------------------------------- */
-.gauge { width: 100%; max-width: 300px; align-self: center; display: block; }
-.gauge .track { stroke: var(--surface-2); }
-.gauge .okarc { stroke: var(--pos-dim); }
-.gauge .warnarc { stroke: var(--neg-dim); }
-.gauge .knob { fill: var(--strong); stroke: var(--accent); }
-.gauge .tick { fill: var(--muted); }
-.gauge text { font-family: var(--font); font-size: 11px; fill: var(--muted); }
-.gauge text.warn { fill: var(--neg); }
 
 /* ---- biểu đồ ------------------------------------------------------------------------------------- */
 .chart-wrap { position: relative; display: flex; gap: 8px; }
@@ -641,3 +633,41 @@ form.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
   .shell.app { padding-bottom: 72px; }
   .app #nav-btn { display: none; }
 }
+
+/* ---- Tổng quan: thanh sụt vốn, thẻ Trạng thái luật ------------------------------------------------ */
+.ddbar { display: block; width: 100%; height: 32px; overflow: visible; }
+.ddbar .track { fill: var(--surface-2); }
+.ddbar .ok { fill: var(--pos-line); fill-opacity: .25; }
+.ddbar .warn { fill: var(--neg); fill-opacity: .35; }
+.ddbar .tick { fill: var(--neg); }
+.ddbar .worst { fill: var(--muted); }
+.ddbar .now { fill: var(--accent); stroke: var(--tile); stroke-width: 2; }
+.ddbar text { font-family: var(--mono); font-size: 10px; fill: var(--faint); }
+.ddbar text.wt { fill: var(--neg); }
+.rules .card-head h2 { margin: 0; }
+.rgrid { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); gap: 12px; }
+.rbox { border: 1px solid var(--line-2); border-radius: 14px; padding: 12px 14px; background: var(--tile); display: flex;
+  flex-direction: column; gap: 8px; min-width: 0; }
+.rbox.hot { border-color: var(--neg); background: var(--neg-bg); }
+.rbox .rk { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; color: var(--muted); }
+.rbox .rv { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; font-size: 12px; }
+.rbox .rv .big2 { font-size: 26px; }
+.rbox .rn { font-size: 12px; color: var(--text-2); line-height: 1.45; }
+.heatbar { display: block; width: 100%; height: 34px; overflow: visible; }
+.heatbar .track { fill: var(--surface-2); }
+.heatbar .zone { fill: var(--neg); fill-opacity: .45; }
+.heatbar .mid { fill: var(--field-line); }
+.heatbar .now { fill: var(--accent); stroke: var(--tile); stroke-width: 2; }
+.heatbar .now.hot { fill: var(--neg); }
+.heatbar text { font-family: var(--mono); font-size: 10px; fill: var(--faint); }
+.bline svg { display: block; width: 100%; height: auto; overflow: visible; }
+.bline .zone { fill: var(--neg); fill-opacity: .14; }
+.bline .lim { stroke: var(--neg-dim); stroke-dasharray: 4 4; }
+.bline .zero { stroke: var(--field-line); }
+.bline .ln { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; }
+.bline .hot { fill: var(--neg); }
+.bline .last { fill: var(--accent); stroke: var(--tile); stroke-width: 2; }
+.bline .ax { font-family: var(--mono); font-size: 10px; fill: var(--faint); }
+.alerts.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+@media (max-width: 1100px) { .rgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .heatbox { grid-column: 1 / -1; } }
+@media (max-width: 640px) { .rgrid { grid-template-columns: 1fr; } .alerts.grid { grid-template-columns: 1fr; } }
