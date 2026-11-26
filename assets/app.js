@@ -306,3 +306,64 @@ document.addEventListener("keydown", function (ev) {
   });
   window.addEventListener("pageshow", function () { barDone(); });
 })();
+
+// Biểu đồ nến của lệnh: nút "Phóng to" mở hộp thoại (data-dialog-open="id"), nút Đóng / bấm ra nền thì đóng.
+document.addEventListener("click", function (ev) {
+  var o = ev.target.closest("[data-dialog-open]");
+  if (o) {
+    var dlg = document.getElementById(o.getAttribute("data-dialog-open"));
+    if (dlg && dlg.showModal && !dlg.open) dlg.showModal();
+    return;
+  }
+  var c = ev.target.closest("[data-dialog-close]");
+  if (c) { var d = c.closest("dialog"); if (d) d.close(); return; }
+  if (ev.target.tagName === "DIALOG" && ev.target.classList.contains("wide")) ev.target.close();
+});
+
+// Điện thoại: chi tiết lệnh phủ toàn màn; nút "← Danh sách lệnh" xoá chi tiết và bỏ ?sel= khỏi URL.
+document.addEventListener("click", function (ev) {
+  var b = ev.target.closest("[data-detail-close]");
+  if (!b) return;
+  var box = document.getElementById("detail");
+  if (box) box.innerHTML = '<div class="empty">Chọn một lệnh để xem chi tiết.</div>';
+  var u = new URL(location.href);
+  u.searchParams.delete("sel");
+  history.replaceState({ smt: 1 }, "", u.toString());
+  document.querySelectorAll(".open-tbl tr.sel").forEach(function (r) { r.classList.remove("sel"); });
+});
+
+// Tab Đã đóng: bấm dòng ngày để thu / mở; nút ở cuối dòng lệnh (hoặc bấm vào dòng) tải nến 4h của lệnh ngay dưới.
+// Tab Đang mở: bấm vào dòng (ngoài link / nút) cũng mở chi tiết như bấm tên mã.
+document.addEventListener("click", function (ev) {
+  var h = ev.target.closest("[data-day-toggle]");
+  if (h) {
+    var tb = h.closest("tbody");
+    var shut = tb.classList.toggle("shut");
+    h.setAttribute("aria-expanded", shut ? "false" : "true");
+    return;
+  }
+  var k = ev.target.closest("[data-kchart]");
+  if (!k) {
+    var tr = ev.target.closest("tr.t");
+    if (!tr || ev.target.closest("a, button, input, select")) return;
+    var inner = tr.querySelector("[data-kchart]") || tr.querySelector("a.symcell[hx-get]");
+    if (inner) inner.click();
+    return;
+  }
+  var row = document.getElementById(k.getAttribute("aria-controls"));
+  if (!row) return;
+  var open = k.getAttribute("aria-expanded") === "true";
+  k.setAttribute("aria-expanded", open ? "false" : "true");
+  row.hidden = open;
+  if (open || row.getAttribute("data-loaded")) return;
+  row.setAttribute("data-loaded", "1");
+  var cell = row.querySelector("td");
+  cell.innerHTML = '<div class="empty">Đang tải nến 4h…</div>';
+  fetch(k.getAttribute("data-kchart"), { credentials: "same-origin", headers: { "HX-Request": "true" } })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(function (html) { cell.innerHTML = html; })
+    .catch(function () {
+      row.removeAttribute("data-loaded");
+      cell.innerHTML = '<div class="empty">Không tải được nến 4h, bấm lại để thử.</div>';
+    });
+});
