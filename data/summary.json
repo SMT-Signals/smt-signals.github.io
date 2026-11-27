@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T20:30:02Z",
+  "updated_at": "2026-11-27T00:30:03Z",
   "delay_hours": 24.0,
   "live_since": "2026-10-20T15:02:13Z",
   "live": {
@@ -20,7 +20,7 @@
     "total_r": 974.7,
     "r_per_trade": 0.3037392334060457,
     "max_drawdown_r": 28.75,
-    "data_to": "2026-11-26T20:00:00Z",
+    "data_to": "2026-11-27T00:00:00Z",
     "rules_since": "2026-10-19"
   }
 }
