@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-11-27T08:30:03Z",
+  "updated_at": "2026-11-27T12:30:03Z",
   "delay_hours": 24.0,
   "live_since": "2026-10-20T15:02:13Z",
   "live": {
-    "closed_trades": 57,
+    "closed_trades": 58,
     "tp3": 42,
-    "sl": 11,
+    "sl": 12,
     "other": 4,
-    "win_rate": 0.7924528301886793,
-    "total_r": 46.443,
-    "r_per_trade": 0.8148,
+    "win_rate": 0.7777777777777778,
+    "total_r": 45.494,
+    "r_per_trade": 0.7844,
     "max_drawdown_r": 3.008,
-    "open_public": 3,
+    "open_public": 2,
     "open_not_yet_public": 0
   },
   "backtest": {
-    "trades": 3209,
-    "win_rate": 0.5933312558429418,
-    "total_r": 974.7,
-    "r_per_trade": 0.3037392334060457,
+    "trades": 3210,
+    "win_rate": 0.5931464174454829,
+    "total_r": 973.7,
+    "r_per_trade": 0.3033330841121497,
     "max_drawdown_r": 28.75,
-    "data_to": "2026-11-27T08:00:00Z",
+    "data_to": "2026-11-27T12:00:00Z",
     "rules_since": "2026-10-19"
   }
 }
